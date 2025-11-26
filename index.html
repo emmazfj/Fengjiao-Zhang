@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jiafeng Zhang - Personal Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            padding: 80px 0;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            background: white;
+            border-radius: 20px;
+            padding: 60px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            margin-top: -50px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section h2 {
+            color: #667eea;
+            font-size: 2rem;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .project-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px 0;
+            border-left: 5px solid #667eea;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .project-desc {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tech-tag {
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            min-width: 200px;
+        }
+
+        .contact-item h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .contact-item a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: #667eea;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 0 20px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .language-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 30px;
+            padding: 10px 20px;
+            z-index: 1000;
+        }
+
+        .language-switch a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            margin: 0 10px;
+            padding: 5px 10px;
+            border-radius: 15px;
+            transition: background 0.3s ease;
+        }
+
+        .language-switch a:hover, .language-switch .active {
+            background: #667eea;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2rem; }
+            .header p { font-size: 1rem; }
+            .content { padding: 30px; }
+            .section h2 { font-size: 1.5rem; }
+            .contact-info { flex-direction: column; gap: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="language-switch">
+        <a href="index_zh.html">中文</a>
+        <a href="index.html" class="active">English</a>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Jiafeng Zhang</h1>
+            <p>Data Scientist | Machine Learning Engineer | Full-Stack Developer</p>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2>About Me</h2>
+                <p>I am a passionate data science and machine learning technologist with rich experience in data analysis, model development, and full-stack development. I focus on transforming complex business problems into data-driven solutions.</p>
+            </div>
+
+            <div class="section">
+                <h2>Technical Skills</h2>
+                <div class="tech-tags">
+                    <div class="tech-tag">Python</div>
+                    <div class="tech-tag">Machine Learning</div>
+                    <div class="tech-tag">Deep Learning</div>
+                    <div class="tech-tag">TensorFlow</div>
+                    <div class="tech-tag">PyTorch</div>
+                    <div class="tech-tag">SQL</div>
+                    <div class="tech-tag">React</div>
+                    <div class="tech-tag">JavaScript</div>
+                    <div class="tech-tag">Node.js</div>
+                    <div class="tech-tag">Statistical Analysis</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Key Projects</h2>
+                <div class="project-card">
+                    <div class="project-title">Intelligent Recommendation System</div>
+                    <div class="project-desc">Deep learning-based personalized recommendation engine that improved user engagement and conversion rates by 30%</div>
+                    <div class="tech-tags">
+                        <div class="tech-tag">Deep Learning</div>
+                        <div class="tech-tag">Recommendation Algorithms</div>
+                        <div class="tech-tag">Python</div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Data Visualization Platform</div>
+                    <div class="project-desc">Real-time data monitoring and visualization system supporting multi-dimensional data analysis and interactive displays</div>
+                    <div class="tech-tags">
+                        <div class="tech-tag">React</div>
+                        <div class="tech-tag">D3.js</div>
+                        <div class="tech-tag">Python</div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">Predictive Maintenance System</div>
+                    <div class="project-desc">Sensor data-based equipment failure prediction with 95% early warning accuracy</div>
+                    <div class="tech-tags">
+                        <div class="tech-tag">Time Series</div>
+                        <div class="tech-tag">Anomaly Detection</div>
+                        <div class="tech-tag">IoT</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Experience</h2>
+                <div class="project-card">
+                    <div class="project-title">Senior Data Scientist | Tech Company</div>
+                    <div class="project-desc">Responsible for machine learning model development, data infrastructure building, team technical guidance, and project management</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Education</h2>
+                <div class="project-card">
+                    <div class="project-title">Master's Degree | Data Science</div>
+                    <div class="project-desc">Specialized in machine learning, statistical modeling, and big data processing technologies</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <a href="mailto:zhangjiafeng@example.com">zhangjiafeng@example.com</a>
+                </div>
+                <div class="contact-item">
+                    <h3>GitHub</h3>
+                    <a href="https://github.com/zhangjiafeng" target="_blank">@zhangjiafeng</a>
+                </div>
+                <div class="contact-item">
+                    <h3>LinkedIn</h3>
+                    <a href="https://linkedin.com/in/zhangjiafeng" target="_blank">Jiafeng Zhang</a>
+                </div>
+            </div>
+            <p>&copy; 2024 Jiafeng Zhang. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

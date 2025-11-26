@@ -1,0 +1,43 @@
+# Jekyll Configuration for GitHub Pages
+title: Jiafeng Zhang - Personal Portfolio
+description: Modern personal portfolio website with Chinese and English versions
+author: Jiafeng Zhang
+email: zhangjiafeng@example.com
+baseurl: ""
+url: "https://zhangjiafeng.github.io"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: null
+plugins: []
+
+# Exclude from processing
+exclude:
+  - .git/
+  - .github/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+
+# SEO Settings
+lang: en
+locale: en_US
+timezone: Asia/Shanghai
+
+# Repository
+repository: zhangjiafeng/zhangjiafeng.github.io
+github_username: zhangjiafeng
+linkedin_username: zhangjiafeng
+
+# Navigation
+navigation:
+  - title: "关于我/About"
+    url: "#about"
+  - title: "技能/Skills"
+    url: "#skills"
+  - title: "项目/Projects"
+    url: "#projects"
+  - title: "联系/Contact"
+    url: "#contact"
