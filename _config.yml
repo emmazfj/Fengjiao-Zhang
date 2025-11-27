@@ -1,10 +1,10 @@
 # Jekyll Configuration for GitHub Pages
-title: Jiafeng Zhang - Personal Portfolio
+title: Fengjiao Zhang - Personal Portfolio
 description: Modern personal portfolio website with Chinese and English versions
-author: Jiafeng Zhang
-email: zhangjiafeng@example.com
+author: Fengjiao Zhang
+email: zhangfengjiao@example.com
 baseurl: ""
-url: "https://zhangjiafeng.github.io"
+url: "https://fengjiao-zhang.github.io"
 
 # Build settings
 markdown: kramdown
@@ -27,9 +27,9 @@ locale: en_US
 timezone: Asia/Shanghai
 
 # Repository
-repository: zhangjiafeng/zhangjiafeng.github.io
-github_username: zhangjiafeng
-linkedin_username: zhangjiafeng
+repository: fengjiao-zhang/fengjiao-zhang.github.io
+github_username: fengjiao-zhang
+linkedin_username: fengjiao-zhang
 
 # Navigation
 navigation:

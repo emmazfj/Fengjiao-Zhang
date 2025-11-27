@@ -166,6 +166,49 @@
             color: white;
         }
 
+        .profile-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+
+        .profile-info {
+            text-align: left;
+        }
+
+        @media (max-width: 768px) {
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .profile-info {
+                text-align: center;
+            }
+
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
         @media (max-width: 768px) {
             .header h1 { font-size: 2rem; }
             .header p { font-size: 1rem; }
@@ -183,14 +226,19 @@
 
     <div class="container">
         <div class="header">
-            <h1>Jiafeng Zhang</h1>
-            <p>Data Scientist | Machine Learning Engineer | Full-Stack Developer</p>
+            <div class="profile-section">
+                <img src="profile_img.jpg" alt="Fengjiao Zhang" class="profile-image" id="profileImg">
+                <div class="profile-info">
+                    <h1>Fengjiao Zhang</h1>
+                    <p>Machine Learning Engineer | AI Algorithms Engineer</p>
+                </div>
+            </div>
         </div>
 
         <div class="content">
             <div class="section">
                 <h2>About Me</h2>
-                <p>I am a passionate data science and machine learning technologist with rich experience in data analysis, model development, and full-stack development. I focus on transforming complex business problems into data-driven solutions.</p>
+                <p>I am a passionate data science and machine learning technologist with rich experience in data analysis, model development, and engineer development. I focus on transforming complex business problems into data-driven solutions.</p>
             </div>
 
             <div class="section">
@@ -243,6 +291,21 @@
             </div>
 
             <div class="section">
+                <h2>Research Experience</h2>
+                <div class="project-card">
+                    <div class="project-title">A TD3-based Multi-agent Deep Reinforcement Learning Method in Mixed Cooperation-Competition Environment</div>
+                    <div class="project-desc">We explored the problem about function approximation error and complex mission adaptability in multi-agent deep reinforcement learning. This paper proposes a new multi-agent deep reinforcement learning algorithm framework named multi-agent time delayed deep deterministic policy gradient. Our work reduces the overestimation error of neural network approximation and variance of estimation result using dual-centered critic, group target network smoothing and delayed policy updating. According to experiment results, it improves the ability to adapt complex missions eventually. Then, we discuss that there is an inevitable overestimation issue about existing multi-agent algorithms about approximating real action-value equations with neural network. We also explain the approximate error of equations in the multi-agent deep deterministic policy gradient algorithm mathematically and experimentally. Finally, the application of our algorithm in the mixed cooperative competition experimental environment further demonstrates the effectiveness and generalization of our algorithm, especially improving the group's ability of adapting complex missions and completing more difficult missions.</div>
+                    <div class="tech-tags">
+                        <div class="tech-tag">Deep Reinforcement Learning</div>
+                        <div class="tech-tag">Multi-Agent Systems</div>
+                        <div class="tech-tag">TD3</div>
+                        <div class="tech-tag">Policy Gradient</div>
+                        <div class="tech-tag">Function Approximation</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
                 <h2>Experience</h2>
                 <div class="project-card">
                     <div class="project-title">Senior Data Scientist | Tech Company</div>
@@ -277,5 +340,82 @@
             <p>&copy; 2024 Jiafeng Zhang. All rights reserved.</p>
         </div>
     </div>
+
+    <script>
+        // HEIC图片处理函数
+        async function convertHEICToJPEG() {
+            const imgElement = document.getElementById('profileImg');
+
+            // 由于浏览器原生不支持HEIC，我们需要一个备用的JPEG版本
+            // 真实部署时，您应该先将HEIC转换为JPEG
+            function fallbackToJPEG() {
+                imgElement.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDE1MCAxNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxNTAiIGhlaWdodD0iMTUwIiByeD0iNzUiIGZpbGw9IiM2NjdlZWEiLz4KPHN2ZyB4PSI0MCIgeT0iNDAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI3MCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJ3aGl0ZSI+CjxwYXRoIGQ9Ik0xMiAyQzEzLjEgMiAxNCAyLjkgMTQgNEMxNCA1LjEgMTMuMSA2IDEyIDZDMTAuOSA2IDEwIDUuMSAxMCA0QzEwIDIuOSAxMC45IDIgMTIgMlpNMjEgOVYyMkgxNVYxMy41SDlWMjJIM1Y5QzMgOCA0IDcgNSA3SDE5QzIwIDcgMjEgOCAyMSA5Wk01IDExVjIwSDdWMTEuNUg1Wk0xMyAxMVYyMEgxNVYxMS41SDEzWk05IDExVjIwSDExVjExLjVIOVoiLz4KPC9zdmc+Cjwvc3ZnPg==';
+                imgElement.alt = 'Profile Image Placeholder';
+            }
+
+            // 检查是否为HEIC格式，如果是则尝试转换或提供备用图片
+            if (imgElement.src.includes('.HEIC') || imgElement.src.includes('.heic')) {
+                // 真实应用中，您应该：
+                // 1. 上传HEIC文件到服务器转换为JPEG
+                // 2. 或者在前端使用heic2any等库进行转换
+                // 这里提供一个placeholder作为演示
+
+                console.log('HEIC image detected, converting...');
+
+                // 尝试加载HEIC文件，如果失败则使用备用图片
+                imgElement.addEventListener('error', function() {
+                    fallbackToJPEG();
+                });
+            }
+        }
+
+        // 页面加载完成后处理图片
+        document.addEventListener('DOMContentLoaded', function() {
+            convertHEICToJPEG();
+        });
+
+        // 图片上传和转换功能（可选）
+        function handleImageUpload(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('profileImg').src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        // 为线性展示添加交互效果
+        document.addEventListener('DOMContentLoaded', function() {
+            // 平滑滚动到ancora点
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // 添加滚动时的动画效果
+            const sections = document.querySelectorAll('.section');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            });
+
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
 </html>
