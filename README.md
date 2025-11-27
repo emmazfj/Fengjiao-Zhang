@@ -94,7 +94,7 @@ MIT License
 ## 📞 联系方式 / Contact
 
 - 📧 Email: zhangjiafeng@example.com
-- 💼 LinkedIn: [Jiafeng Zhang](https://linkedin.com/in/zhangjiafeng)
+- 💼 LinkedIn: [Fengjiao Zhang](https://linkedin.com/in/zhangjiafeng)
 - 🐙 GitHub: [@zhangjiafeng](https://github.com/zhangjiafeng)
 
 ---
